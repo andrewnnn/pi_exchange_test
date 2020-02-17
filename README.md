@@ -1,6 +1,7 @@
 ### Pi Exchange Test
 Customer Management for Telephone Company
 
+
 **Technology Stack**
 
 * Python, Flask for API backend
@@ -28,3 +29,21 @@ POST /customers
 
 Create customer resource with (name, phone_number) key value pairs in form-data
 
+**Run Instructions**
+
+```
+docker image build -t pi_exchange:1.0 .
+
+docker container run --publish 8000:5000 --detach --name pe pi_exchange:1.0
+
+docker stop pe
+```
+
+
+**Test**
+
+GET, localhost:8000/customers?prefix=123
+
+POST, localhost:8000/customers?prefix=123, form-data: {name: "John Smith", phone_number: "12345678901"}
+
+Can use Postman for this
