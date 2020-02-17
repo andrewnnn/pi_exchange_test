@@ -36,6 +36,7 @@ Build sqlite db with 10k records ~ 60 seconds
 python db_init.py
 ```
 
+Docker build, run and stop commands
 ```
 docker image build -t pi_exchange:1.0 .
 
