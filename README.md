@@ -31,6 +31,11 @@ Create customer resource with (name, phone_number) key value pairs in form-data
 
 **Run Instructions**
 
+Build sqlite db with 10k records ~ 60 seconds
+```
+python db_init.py
+```
+
 ```
 docker image build -t pi_exchange:1.0 .
 
